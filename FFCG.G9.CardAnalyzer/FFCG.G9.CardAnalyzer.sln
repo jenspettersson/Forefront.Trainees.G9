@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFCG.G9.CardAnalyzer", "FFCG.G9.CardAnalyzer\FFCG.G9.CardAnalyzer.csproj", "{A165DF3F-384E-45DE-85D0-F42D27D99E12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFCG.G9.CardAnalyzer.Tests", "FFCG.G9.CardAnalyzer.Tests\FFCG.G9.CardAnalyzer.Tests.csproj", "{0576579E-F269-4EFE-B508-63409646F759}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A165DF3F-384E-45DE-85D0-F42D27D99E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A165DF3F-384E-45DE-85D0-F42D27D99E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A165DF3F-384E-45DE-85D0-F42D27D99E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A165DF3F-384E-45DE-85D0-F42D27D99E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0576579E-F269-4EFE-B508-63409646F759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0576579E-F269-4EFE-B508-63409646F759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0576579E-F269-4EFE-B508-63409646F759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0576579E-F269-4EFE-B508-63409646F759}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
