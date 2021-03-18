@@ -6,20 +6,19 @@ namespace FFCG.G9.CardAnalyzer
 {
     public class Deck : IDeck
     {
-        private readonly Stack<Card> _cards;
-        private readonly IEnumerable<Card> _original;
+        private readonly Card[] _cards;
         private readonly Random _rnd;
-
+        private int _drawn;
         public Deck(IEnumerable<Card> cards)
         {
-            _original = cards;
-            _cards = new Stack<Card>(_original);
+            _cards = cards.ToArray();
             _rnd = new Random();
+            _drawn = 0;
         }
 
         public Card Draw()
         {
-            return _cards.Pop();
+            return _cards[_drawn++];
         }
 
         public static Deck Default()
@@ -38,11 +37,15 @@ namespace FFCG.G9.CardAnalyzer
 
         public void Shuffle()
         {
-            _cards.Clear();
+            _drawn = 0;
 
-            foreach (var card in _original.OrderBy(x => _rnd.Next()))
+            // Fisher-Yates shuffle method
+            for (int i = _cards.Length - 1; i > 0; --i)
             {
-                _cards.Push(card);
+                var k = _rnd.Next(i + 1);
+                var temp = _cards[i];
+                _cards[i] = _cards[k];
+                _cards[k] = temp;
             }
         }
     }

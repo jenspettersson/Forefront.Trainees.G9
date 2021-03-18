@@ -11,14 +11,12 @@ namespace FFCG.G9.CardAnalyzer.Analyzer
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
             int tries = 0;
+            var hand = new List<Card>();
             while (true)
             {
                 tries++;
-                var elapsedTotalSeconds = stopwatch.Elapsed.TotalSeconds;
-                var avg = tries / elapsedTotalSeconds;
-                Console.Write($"\r{tries:N0} - {stopwatch.Elapsed} - Tries per second: {avg:N0}");
                 deck.Shuffle();
-                var hand = new List<Card>();
+                
                 for (int i = 0; i < 5; i++)
                 {
                     hand.Add(deck.Draw());
@@ -28,6 +26,7 @@ namespace FFCG.G9.CardAnalyzer.Analyzer
                 {
                     return new AnalyzeResult(hand, tries, stopwatch, rule);
                 }
+                hand.Clear();
             }
         }
         

@@ -12,12 +12,15 @@ namespace FFCG.G9.CardAnalyzer.Analyzer
         public IRule Rule { get; }
         public TimeSpan Elapsed { get; }
 
+        public double Average { get; }
+
         public AnalyzeResult(List<Card> matchingHand, int tries, Stopwatch stopwatch, IRule rule)
         {
             MatchingHand = matchingHand;
             Tries = tries;
             Rule = rule;
             Elapsed = stopwatch.Elapsed;
+            Average = tries / Elapsed.TotalSeconds;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace FFCG.G9.CardAnalyzer
                 Console.WriteLine($"\t{card}");
             }
             
-            Console.WriteLine($"Took {result.Tries:N0} tries - {result.Elapsed}");
+            Console.WriteLine($"Took {result.Tries:N0} tries - {result.Elapsed} (average: {result.Average:N0}/sec)");
         }
     }
 }
