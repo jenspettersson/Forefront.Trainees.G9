@@ -15,14 +15,12 @@ namespace FFCG.G9.CardAnalyzer.Rule
         
         public bool Matches(List<Card> cards)
         {
-            var min = cards.Min(x => x.Number);
-            if (min != 10)
-                return false;
+            for (var i = 0; i < cards.Count; i++)
+            {
+                if (cards[i].Number < 10)
+                    return false;
+            }
             
-            var max = cards.Max(x => x.Number);
-            if (max != 14)
-                return false;
-
             return _straightFlush.Matches(cards);
         }
     }

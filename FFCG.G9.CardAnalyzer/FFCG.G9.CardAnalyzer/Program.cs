@@ -9,19 +9,25 @@ namespace FFCG.G9.CardAnalyzer
     {
         static void Main(string[] args)
         {
-            var deck = Deck.Default();
-
-            var rule = new RoyalStraightFlush();
-            var result = new ConsoleAnalyzer().Analyze(deck, rule);
-
-            Console.WriteLine($"\nWe've got a match: {rule.Description}");
-            
-            foreach (var card in result.MatchingHand.OrderBy(x => x.Number))
+            while (true)
             {
-                Console.WriteLine($"\t{card}");
-            }
+                var deck = Deck.Default();
+
+                var rule = new RoyalStraightFlush();
+                var result = new ConsoleAnalyzer().Analyze(deck, rule);
+
+                Console.WriteLine($"\nWe've got a match: {rule.Description}");
             
-            Console.WriteLine($"Took {result.Tries:N0} tries - {result.Elapsed} (average: {result.Average:N0}/sec)");
+                foreach (var card in result.MatchingHand.OrderBy(x => x.Number))
+                {
+                    Console.WriteLine($"\t{card}");
+                }
+            
+                Console.WriteLine($"Took {result.Tries:N0} tries - {result.Elapsed} (average: {result.Average:N0}/sec)");
+
+                Console.WriteLine("\nPress enter to run again");
+                Console.ReadLine();
+            }
         }
     }
 }
