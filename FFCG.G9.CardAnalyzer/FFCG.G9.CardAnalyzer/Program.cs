@@ -27,6 +27,7 @@ namespace FFCG.G9.CardAnalyzer
 
                 Console.WriteLine("\nPress enter to run again");
                 Console.ReadLine();
+                Console.Clear();
             }
         }
     }
