@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFCG.G9.DependencyInjection.Api", "FFCG.G9.DependencyInjection.Api\FFCG.G9.DependencyInjection.Api.csproj", "{55861053-88C7-4815-B065-FD9BBB1A2625}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFCG.G9.DependencyInjection.Api.Tests", "FFCG.G9.DependencyInjection.Api.Tests\FFCG.G9.DependencyInjection.Api.Tests.csproj", "{589BAC3A-18C1-4CE8-8CE1-11B64BD5A63B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55861053-88C7-4815-B065-FD9BBB1A2625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55861053-88C7-4815-B065-FD9BBB1A2625}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55861053-88C7-4815-B065-FD9BBB1A2625}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55861053-88C7-4815-B065-FD9BBB1A2625}.Release|Any CPU.Build.0 = Release|Any CPU
+		{589BAC3A-18C1-4CE8-8CE1-11B64BD5A63B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{589BAC3A-18C1-4CE8-8CE1-11B64BD5A63B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{589BAC3A-18C1-4CE8-8CE1-11B64BD5A63B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{589BAC3A-18C1-4CE8-8CE1-11B64BD5A63B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
